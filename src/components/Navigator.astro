@@ -6,11 +6,23 @@ import Image from "astro/components/Image.astro";
 <div>
     <div class="centergrid">
         <div>
-            <a href="/"><Image src="/cards/PNG/large/card_back.png" alt="" width={128} height={128} ></Image></a>
+            <a href="/about"><Image src="/AboutCard.svg" alt="" width={128} height={128} ></Image></a>
 
         </div>
         <div>
-            <a href="/about">About</a>
+            <a href="/works"><Image src="/WorksCard.svg" alt="" width={128} height={128} ></Image></a>
+
+        </div>
+        <div>
+            <a href="/contact"><Image src="/ContactCard.svg" alt="" width={128} height={128} ></Image></a>
         </div>
     </div>
 </div>
+<style>
+    .centergrid{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+</style>
