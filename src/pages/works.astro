@@ -1,5 +1,8 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+
+const allworks = await getCollection('works');
 
 
 ---
@@ -7,7 +10,16 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 <div>
     <h1>Works:</h1>
-    <!-- Content collection fetching will go here -->
-
+    <!-- card rendered -->
+    <div>
+        {allworks.map((work) => (
+            <div>
+              <h2>{work.data.title}</h2>
+              <p>{work.data.year}</p>
+              <p>{work.data.description}</p>
+              
+            </div>
+          ))}
+    </div>
 </div>
 </Layout>
