@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import "../style/contactform.css"
 
 ---
 
@@ -10,7 +10,17 @@ import Layout from "../layouts/Layout.astro";
     <div>
         <p>Email: Snowdingo.tech@gmail.com</p>
         <p>Discord, X, Devpost, Medium: @Snowdingo</p>
-        
+    </div>
+    <div>
+        <h2>Contact Me Directly:</h2>
+        <form class="form">
+            <label>Your Name:</label>
+            <input placeholder="please enter your first and last name" />
+            <label>Your Email-Adress:</label>
+            <input placeholder="please enter your email" />
+            <label>Message:</label>
+            <textarea></textarea>
+        </form>
     </div>
 
 </div>
