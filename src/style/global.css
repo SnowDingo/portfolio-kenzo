@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+
+h1{
+    font-family: "Kumar One", serif;
+}
+h2,h3,h4,h5,h6,p,a{
+    font-family: "Playfair Display", serif;
+}
+a{
+    font-style: italic;
+}
