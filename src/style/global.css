@@ -11,6 +11,10 @@ h2,h3,h4,h5,h6,p,a,ul,li{
 }
 a{
     font-style: italic;
+    text-decoration:underline;
+}
+header nav a{
+    text-decoration: none;
 }
 
 .slot{
