@@ -1,4 +1,5 @@
 ---
+import Image from 'astro/components/Image.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -6,7 +7,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <div >
+    <div class="flex flex-row items-center my-4" >
+        <Image src={"/suits/Heart.svg"} alt={"Heart"} width={32} height={32} />
         <h1>About</h1>
     </div>
     
@@ -19,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
     <p><span class="year">Age 15:</span> Shifted to web development; released WordOrca and worked on Astro.js documentation.</p>
     <h2>My Skill Sets:</h2>
     <div>
-        <ul>
+        <ul class="list-disc">
             <li>React.js</li>
             <li>Next.js</li>
             <li>Vercel</li>

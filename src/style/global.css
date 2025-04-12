@@ -6,9 +6,13 @@
 h1{
     font-family: "Kumar One", serif;
 }
-h2,h3,h4,h5,h6,p,a{
+h2,h3,h4,h5,h6,p,a,ul,li{
     font-family: "Playfair Display", serif;
 }
 a{
     font-style: italic;
+}
+
+.slot{
+    margin: 2% 4%;
 }

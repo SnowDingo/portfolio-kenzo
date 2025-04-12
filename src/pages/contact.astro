@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 import "../style/contactform.css"
 
@@ -6,7 +7,10 @@ import "../style/contactform.css"
 
 <Layout>
 <div>
-    <h1>Contact:</h1>
+    <div class="flex flex-row items-center my-4" >
+        <Image src={"/suits/Club.svg"} alt={"Club"} width={32} height={32} />
+        <h1>Contact:</h1>
+    </div>
     <div>
         <p>Email: Snowdingo.tech@gmail.com</p>
         <p>Discord, X, Devpost, Medium: @Snowdingo</p>
