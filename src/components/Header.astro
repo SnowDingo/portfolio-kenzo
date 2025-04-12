@@ -6,9 +6,9 @@ const currentpage = Astro.url.pathname
 ---
 
 <header class="bg-black text-white shadow-sm py-4 px-2 ">
-    <nav class="flex flex-row justify-between px-2 max-w-screen-xl mx-auto">
+    <nav class="flex flex-row justify-between px-2 max-w-screen-xl mx-auto  gap-2 md:gap-4">
         <a href="/" class={currentpage === "/" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Home</a>
-        <div class="flex flex-row gap-10">
+        <div class="flex flex-row justify-between gap-4 md:gap-10">
             <a href="/about" class={currentpage === "/about" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>About</a>
         <a href="/works" class={currentpage === "/works" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Works</a>
         <a href="/contact" class={currentpage === "/contact" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Contact</a>
