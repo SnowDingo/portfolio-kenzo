@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 
 const allworks = await getCollection('works');
 
@@ -9,7 +10,10 @@ const allworks = await getCollection('works');
 
 <Layout>
 <div>
-    <h1>Works:</h1>
+  <div class="flex flex-row items-center my-4" >
+    <Image src={"/suits/Spades.svg"} alt={"Spade"} width={32} height={32} />
+    <h1>Works</h1>
+</div>
     <!-- card rendered -->
     <div>
         {allworks.map((work) => (

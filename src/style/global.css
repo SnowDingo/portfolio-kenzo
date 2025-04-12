@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+
+h1{
+    font-family: "Kumar One", serif;
+}
+h2,h3,h4,h5,h6,p,a,ul,li{
+    font-family: "Playfair Display", serif;
+}
+a{
+    font-style: italic;
+    text-decoration:underline;
+}
+header nav a{
+    text-decoration: none;
+}
+
+.slot{
+    margin: 2% 4%;
+}
+h1 {
+    font-size: clamp(1.8rem, 4vw + 0.8rem, 3.2rem);
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: clamp(1.35rem, 3.2vw + 0.45rem, 2.4rem);
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: clamp(1.125rem, 2.5vw + 0.4rem, 1.8rem);
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: clamp(1rem, 2vw + 0.3rem, 1.5rem);
+    font-weight: 500;
+  }
+  

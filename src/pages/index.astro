@@ -15,7 +15,7 @@ const allworks = await getCollection('works');
 		<h2>Works</h2>
 		{allworks.map((work) => (
 			<div>
-				<a href={`/works/` + work.data.title}>{work.data.title}</a>
+				<a href={`/works/` + work.data.title.toLowerCase()}>{work.data.title}</a>
 			</div>
 		))}
 	</div>
