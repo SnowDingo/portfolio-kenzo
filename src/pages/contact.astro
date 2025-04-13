@@ -1,32 +1,63 @@
 ---
 import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
-import "../style/contactform.css"
+import "../style/contactform.css";
 
+// email where the form emails will be sent
+// NOTE: you need to activate the form once, i.e. fill a dummy data
+// and then check your mailbox, and click on the 'activate' button
+const DESTINATION_EMAIL = "snowdingo.tech@gmail.com";
 ---
 
 <Layout>
-<div>
-    <div class="flex flex-row items-center my-4" >
-        <Image src={"/suits/Club.svg"} alt={"Club"} width={32} height={32} />
-        <h1>Contact:</h1>
+  <div>
+    <div class="flex flex-row items-center my-4">
+      <Image src={"/suits/Club.svg"} alt={"Club"} width={32} height={32} />
+      <h1>Contact:</h1>
     </div>
     <div>
-        <p>Email: Snowdingo.tech@gmail.com</p>
-        <p>Discord, X, Devpost, Medium: @Snowdingo</p>
+      <p>Email: Snowdingo.tech@gmail.com</p>
+      <p>Discord, X, Devpost, Medium: @Snowdingo</p>
     </div>
     <div>
-        <h2>Contact Me Directly:</h2>
-        <form class="form">
-            <label>Your Name:</label>
-            <input placeholder="please enter your first and last name" />
-            <label>Your Email-Adress:</label>
-            <input placeholder="please enter your email" />
-            <label>Message:</label>
-            <textarea></textarea>
-            <button>Send</button>
-        </form>
+      <h2 class="mb-4">Contact Me Directly</h2>
+      <form
+        class="form grid grid-cols-2 gap-4"
+        target="_blank"
+        method="POST"
+        action={`https://formsubmit.co/${DESTINATION_EMAIL}`}
+      >
+        <div class="grid grid-cols-2 gap-4">
+          <label for="name">Your Name:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="please enter your first and last name"
+            class="p-2 border-gray-300 border-2 rounded-sm"
+            required
+          />
+          <label for="email">Your Email-Adress:</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="please enter your email"
+            required
+            class="p-2 border-gray-300 border-2 rounded-sm"
+          />
+          <label for="message" class="col-span-2">Message:</label>
+          <textarea
+            name="message"
+            rows="10"
+            required
+            class="col-span-2 p-2 border-gray-300 border-2 rounded-sm"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-black text-white font-bold text-2xl p-4 rounded-4xl"
+          >Send</button
+        >
+      </form>
     </div>
-
-</div>
+  </div>
 </Layout>
