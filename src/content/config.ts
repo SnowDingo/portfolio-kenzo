@@ -6,6 +6,7 @@ const works = defineCollection({
 		description: z.string(),
 		year: z.string(),
 		projectlink: z.string(),
+		imglink:z.string()
 	})
 });
 

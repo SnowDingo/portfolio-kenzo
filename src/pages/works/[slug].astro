@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+// get slug
+const { slug } = Astro.params;
+
+// get data from collection that matches with slug.
+
+const work = (await getCollection('works')).find((word) => word.slug == slug);
+
+---
+
+<Layout>
+    {work?.data == null ? <div><h2>Sorry. We couldn't find the project you were looking for. <br/>Please visit other pages</h2></div>:<></>}
+  <article class="my-10 ml-10">
+    <Image src={`/Work/` + work?.data.imglink} alt={"project cover"}  height={256} width={256}/>
+    <h1>{work?.data.title}</h1>
+    <p>Created in {work?.data.year}</p>
+    <p><em>{work?.data.description}</em></p>
+    <div>{work?.body}</div>
+  </article>
+</Layout>
