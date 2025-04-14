@@ -1,18 +1,25 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
+
+
 ---
 
-<div id="container">
-	<div>
-	<h1 class="">Hello, I'm SnowDingo👋</h1>
-	<h2>I craft educational tools, lead coding communities, and dream of making the world better</h2>
-	<p>I am a high school developer from rural Japan, who is passionate about tech, innovations, and building a brighter future. </p>
+<div id="container" class="">
+	<div class="w-screen bg-purple-50">
+		<div class="z-negative ">
+		</div>
+	
+	<div class="z-40 ml-10 w-1/2 my-auto   py-4 js-rellax relative " data-rellax-speed="5">
+	<h1 class="mb-4 z-40">Hello, <br/>I'm SnowDingo👋</h1>
+	<h2 class="smallh2 z-40">I am a high school developer from rural Japan, who is passionate about tech, innovations, and building a brighter future.</h2>
 	</div>
-	<h2>My story:</h2>
+</div>
+	
+	<section class="my-12">
+		<h2>My story:</h2>
 	<p>I'm a web developer that focuses on solving real world problems not just to build features. I also lead communities like coding club and coder-dojo inspired events. </p>
 	<!-- Skills -->
-	<section class="mt-10">
 		<h2 class="text-2xl font-bold mb-2">Skills</h2>
 		<ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
 		  <li>TypeScript</li>
@@ -26,7 +33,12 @@ import background from '../assets/background.svg';
 		</ul>
 	  </section>
 	  <!-- Contact card component -->
+
+
+	  <script src="/js/rellax.min.js" defer></script>
+<script is:inline>
+  window.addEventListener('load', () => {
+  new Rellax('.js-rellax');
+});
+</script>
 </div>
-
-
-<style>
