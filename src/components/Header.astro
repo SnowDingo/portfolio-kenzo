@@ -5,13 +5,14 @@ const currentpage = Astro.url.pathname
 
 ---
 
-<header class="bg-black text-white shadow-sm py-4 px-2 ">
+<header class="bg-white backdrop:blur text-gray-900 shadow-sm py-4 sticky px-2 z-50  top-0">
     <nav class="flex flex-row justify-between px-2 max-w-screen-xl mx-auto  gap-2 md:gap-4">
-        <a href="/" class={currentpage === "/" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Home</a>
+        <a href="/" class={currentpage === "/" ? "border-b-2 transition-all border-purple-500" : "hover:text-gray-900"}>Home
+</a>
         <div class="flex flex-row justify-between gap-4 md:gap-10">
-            <a href="/about" class={currentpage === "/about" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>About</a>
-        <a href="/works" class={currentpage === "/works" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Works</a>
-        <a href="/contact" class={currentpage === "/contact" ? "border-b-2 border-red-500" : "hover:text-gray-200"}>Contact</a>
+            <a href="/about" class={currentpage === "/about" ? "border-b-2 border-purple-500" : "hover:text-gray-900"}>About</a>
+        <a href="/works" class={currentpage === "/works" ? "border-b-2 border-purple-500" : "hover:text-gray-900"}>Works</a>
+        <a href="/contact" class={currentpage === "/contact" ? "border-b-2 border-purple-500" : "hover:text-gray-900"}>Contact</a>
         </div>
         
     </nav>

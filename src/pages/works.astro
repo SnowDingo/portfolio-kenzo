@@ -9,15 +9,15 @@ const allworks = await getCollection('works');
 ---
 
 <Layout>
-<div>
-  <div class="flex flex-row items-center my-4" >
-    <Image src={"/suits/Spades.svg"} alt={"Spade"} width={32} height={32} />
+<div class="ml-10 mb-10">
+  <div class=" my-4" >
     <h1>Works</h1>
+    <p>Through 9 years of coding experience, I have created various functional projects.</p>
 </div>
     <!-- card rendered -->
-    <div>
+    <div class="grid-cols-3 grid">
         {allworks.map((work) => (
-            <div>
+            <div  class="shadow-sm m-4  pb-4 px-4 rounded-md">
               <h2>{work.data.title}</h2>
               <p>{work.data.year}</p>
               <p>{work.data.description}</p>
