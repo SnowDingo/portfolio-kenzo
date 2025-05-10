@@ -18,7 +18,7 @@ const allworks = await getCollection('works');
     <div class="grid-cols-3 grid">
         {allworks.map((work) => (
             <div  class="shadow-sm m-4  pb-4 px-4 rounded-md">
-              <h2>{work.data.title}</h2>
+              <h2><a href={"/works/"+work.data.title.toLowerCase()}>{work.data.title}</a></h2>
               <p>{work.data.year}</p>
               <p>{work.data.description}</p>
               
