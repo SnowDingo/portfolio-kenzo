@@ -1,4 +1,5 @@
 ---
+import Image from 'astro/components/Image.astro';
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
 
@@ -6,39 +7,70 @@ import { animate } from 'animejs';
 ---
 
 <div id="container" class="">
-	<div class="w-screen bg-purple-50">
-		<div class="z-negative ">
-		</div>
+	<div class="w-screen py-10 flex flex-row  bg-purple-50">
+		
 	
 	<div class="z-40 ml-10 w-1/2 my-auto   py-4 js-rellax relative " data-rellax-speed="5">
 	<h1 class="mb-4 z-40">Hello, <br/>I'm SnowDingo👋</h1>
 	<h2 class="smallh2 z-40">I am a high school developer from rural Japan, who is passionate about tech, innovations, and building a brighter future.</h2>
 	</div>
+	<div class="hidden md:block rotate-2">
+			<Image src={"/Work/FindingNimofish.png"} alt={""} width={512} height={288} />
+		</div>
 </div>
 	
-	<section class="my-12 ml-12">
-		<h2>My Story:</h2>
-	<p>I'm a web developer that focuses on solving real world problems not just to build features. I also lead communities like coding club and coder-dojo inspired events. <br/>For more details, please visit the <a href="/about">about</a> page.</p>
-	<!-- Skills -->
-		<h2 class="text-2xl font-bold mb-2">Skills</h2>
-		<ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
-		  <li>TypeScript</li>
-		  <li>ReactJS</li>
-		  <li>Astro</li>
-		  <li>TailwindCSS</li>
-		  <li>FireBase</li>
-		  <li>Git/GitHub</li>
-		  <li>Java</li>
-		  <li>Python</li>
+	<section class="my-12 ">
+		<div class="ml-12">
+			<h2>My Story:</h2>
+			<p>I'm a web developer that focuses on solving real world problems not just to build features. I also lead communities like coding club and coder-dojo inspired events. <br/>For more details, please visit the <a href="/about">about</a> page.</p>
+		
+		</div>
+			<!-- Skills -->
+	<div class="mt-10 bg-purple-900 text-white">
+		<div class="ml-12 py-40">
+			<div class="mr-12">
+	<h2 class="text-2xl font-bold mb-2 border-b-2 border-b-white  text-center">Skills</h2>
+</div>
+		<ul class=" flex flex-row justify-around text-6xl my-10  gap-4">
+			<!-- Nextjs -->
+		  <li><i class="devicon-nextjs-plain"></i></li>
+		  <!-- React -->
+		  <li>
+			<i class="devicon-react-original"></i>
+
+          </li>
+		  <!-- Typescript -->
+		  <li><i class="devicon-typescript-plain"></i>
+		  </li>
+		  <li><i class="devicon-astro-plain"></i></li>
+		  <!-- Firebase -->
+		  <li><i class="devicon-firebase-plain"></i></li>
 		</ul>
+		<div class="flex flex-row gap-4 justify-evenly mt-10">
+		<div class=" px-4">
+			<h3>Languages</h3>
+			<ul>
+				<li>JavaScript</li>
+				<li>Python</li>
+				<li>Java</li>
+			</ul>
+		</div>
+		<div>
+			<h3>Frameworks</h3>
+			<ul>
+				<li>Astro.js</li>
+				<li>Next.js</li>
+				<li>React.js</li>
+				<li>Tailwind CSS</li>
+				<li>ShadCN</li>
+				<li>Firebase</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	</div>
 	  </section>
 	  <!-- Contact card component -->
 
 
-	  <script src="/js/rellax.min.js" defer></script>
-<script is:inline>
-  window.addEventListener('load', () => {
-  new Rellax('.js-rellax');
-});
-</script>
 </div>
