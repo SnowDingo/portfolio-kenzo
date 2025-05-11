@@ -15,10 +15,10 @@ const allworks = await getCollection('works');
 	<Welcome />
 	<div class="mt-12 ml-12">
 		<h2>Projects I've worked on...</h2>
-		<div class=" flex flex-row flex-wrap gap-4 my-4">
+		<div class=" flex flex-row justify-around flex-wrap gap-4 my-4">
 		{allworks.map((work) => (
-			<div>
-				<Image src={`/Work/` + work.data.imglink} alt={work.data.title} width={384} height={216} />
+			<div class="text-center">
+				<Image class={"rounded-md"} src={`/Work/` + work.data.imglink} alt={work.data.title} width={384} height={216} />
 				<a class="text-center" href={`/works/` + work.data.title.toLowerCase()}>{work.data.title}</a>
 			</div>
 		))}
