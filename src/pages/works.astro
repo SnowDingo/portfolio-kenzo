@@ -11,13 +11,16 @@ allworks.sort((a,b) => {
 ---
 
 <Layout>
-<div class="mx-10 mb-10">
-  <div class=" my-4" >
-    <h1>Works</h1>
+<div class="mt-0 mb-10">
+  <div class=" my-4   bg-[url('/Work/banner.png')] backdrop-blur-md h-48 w-screen  bg-cover bg-center" >
+    <div class="px-10 text-white backdrop-blur-xs absolute inset-0">
+      <h1>Works</h1>
     <p>Through 9 years of coding experience, I have created various functional projects.</p>
+    </div>
+    
 </div>
     <!-- card rendered -->
-    <div class="grid-cols-1 md:grid-cols-2  lg:grid-cols-3 grid ">
+    <div class="mx-10 grid-cols-1 md:grid-cols-2  lg:grid-cols-3 grid ">
         {allworks.map((work) => (
             <div  class="shadow-md m-4  pb-4 px-4 rounded-md">
               <h2><a href={"/works/"+work.data.title.toLowerCase()}>{work.data.title}</a></h2>
