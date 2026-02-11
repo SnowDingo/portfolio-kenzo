@@ -5,7 +5,9 @@ import Image from "astro/components/Image.astro";
 
 const allworks = await getCollection('works');
 
-
+allworks.sort((a,b) => {
+  return new Date(a.data.year).getTime() - new Date(b.data.year).getTime();
+})
 ---
 
 <Layout>
