@@ -11,15 +11,15 @@ allworks.sort((a,b) => {
 ---
 
 <Layout>
-<div class="ml-10 mb-10">
+<div class="mx-10 mb-10">
   <div class=" my-4" >
     <h1>Works</h1>
     <p>Through 9 years of coding experience, I have created various functional projects.</p>
 </div>
     <!-- card rendered -->
-    <div class="grid-cols-3 grid">
+    <div class="grid-cols-1 md:grid-cols-2  lg:grid-cols-3 grid ">
         {allworks.map((work) => (
-            <div  class="shadow-sm m-4  pb-4 px-4 rounded-md">
+            <div  class="shadow-md m-4  pb-4 px-4 rounded-md">
               <h2><a href={"/works/"+work.data.title.toLowerCase()}>{work.data.title}</a></h2>
               <p>{work.data.year}</p>
               <p>{work.data.description}</p>
